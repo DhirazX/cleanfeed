@@ -16,6 +16,10 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
       hideRecommendations =
         hideRecommendations || element.style.display === "none";
     });
+    document.querySelectorAll("#contents").forEach(function (element) {
+      element.style.display =
+        element.style.display === "none" ? "block" : "none";
+    });
 
     // Save the hide/show state to storage
     chrome.storage.sync.set({ hideRecommendations });
