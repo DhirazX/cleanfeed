@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "CleanFeed",
+  "version": "1.0.0",
+  "icons": {},
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["scripting", "tabs", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
