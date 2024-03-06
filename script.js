@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("#mybtn").addEventListener("click", function () {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      chrome.tabs.sendMessage(tabs[0].id, { action: "toggleRecommendations" });
+      chrome.tabs.sendMessage(tabs[0].id, {
+        action: "toggleRecommendations",
+      });
     });
   });
 });

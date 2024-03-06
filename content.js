@@ -7,7 +7,7 @@ chrome.storage.sync.get("hideRecommendations", function (data) {
 });
 
 // Listen for messages from the extension popup
-chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function (message) {
   if (message.action === "toggleRecommendations") {
     let hideRecommendations = false;
     document.querySelectorAll("#secondary").forEach(function (element) {

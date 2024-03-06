@@ -28,4 +28,10 @@
   border-radius: 10px;
   padding: 10px 15px;
   font-weight: 600;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+#mybtn:hover {
+  background-color: #ebe7cf;
+  transform: scale(0.98);
 }
