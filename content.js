@@ -18,7 +18,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     });
     document.querySelectorAll("#contents").forEach(function (element) {
       element.style.display =
-        element.style.display === "none" ? "block" : "none";
+        element.style.display === "none" ? "flex" : "none";
     });
 
     // Save the hide/show state to storage
